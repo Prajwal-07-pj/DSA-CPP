@@ -1,20 +1,14 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int n ,rem ,count = 0, i, result;
+    int n ,rem, result=0;
     cout << "Enter any number: ";
     cin >> n;
 
-    while(n>0){
+    while(n){
         rem = n % 10;
         n/=10;
-        count++;
-    }
-
-    for(i=count;i>=0;i--){
-        rem = n % 10;
-        n/=10;
-        result = rem * 10 * i;
+        result = result * 10 + rem;
     }
 
     cout << result;
