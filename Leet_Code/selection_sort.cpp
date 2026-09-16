@@ -1,11 +1,19 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int arr[5]={5,4,3,2,1};
+    int arr[1000];
+    int n;
+    cout<<"Enter the size of array : ";
+    cin >> n;
 
-    for(int i=0;i<5-1;i++){
+    cout<<"Enter the values : " << endl;
+    for(int i=0;i<n;i++){
+        cin >> arr[i];
+    }
+
+    for(int i=0;i<n-1;i++){
         int index = i;
-        for(int j=i+1;j<5;j++){
+        for(int j=i+1;j<n;j++){
             if(arr[j]<arr[index]){
                 index = j;
             }
@@ -13,7 +21,7 @@ int main(){
         swap(arr[index],arr[i]);
     }
 
-    for(int i=0;i<5;i++){
+    for(int i=0;i<n;i++){
         cout << arr[i];
     }
 }
