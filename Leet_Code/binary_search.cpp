@@ -25,15 +25,22 @@ int binary_sort(int arr[],int key){
 }
 
 int main(){
-    int arr[5] = {1,3,5,6,8};
-    int key = 20;
+    int arr[1000];
+    int key;
+    cout<<"Enter the no of elements : ";
+    int n;
+    cin >> n;
+    cout<<"Enter values : ";
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }   
+    cout << "Enter the key : ";
+    cin >> key;
     int result = binary_sort(arr,key);
     if(result!=-1){
         cout << "Element found at : " << result;
     }else{
         cout << "Element not found";
     }
-
-
 
 }
