@@ -20,5 +20,9 @@ int main(){
         }
     }
 
+    // always remainder that low is the best position to insert 
+    // the value in binary search
+    // alternate code same as binary only return low  
+
     cout << index;
 }
