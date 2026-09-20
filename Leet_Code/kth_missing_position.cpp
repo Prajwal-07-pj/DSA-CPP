@@ -4,20 +4,20 @@ using namespace std;
 int main() {
     int arr[] = {1, 2, 4, 6, 7, 10};
     int n = 6;
-    int a[100];
+    int k = 5;
+    int i=0,j=n-1,mid,ans=n;
 
-    for (int i = 0; i < n - 1; i++) {
-        int current = arr[i];
-        int next = arr[i + 1];
-
-        for (int x = current + 1; x < next; x++) {
-            arr[i] = x;
+    while (i<=j)
+    {
+        mid = i+(j-i)/2;
+        if(arr[mid]-mid-1 >= k){
+            ans = mid;
+            j = mid - 1;
+        }else{
+            i = mid + 1;
         }
     }
 
-    for(int i=0;i<n;i++){
-        cout << a[i] << " ";
-    }
-
-    return 0;
+    cout << ans + k;
+    
 }
