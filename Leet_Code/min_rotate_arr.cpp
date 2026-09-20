@@ -10,7 +10,7 @@ int main(){
         if(arr[mid]>=arr[0]){
             i = mid + 1;
         }else {
-            ans = mid;
+            ans = arr[mid];
             j = j - 1;
         }
     }
