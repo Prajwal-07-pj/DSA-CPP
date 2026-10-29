@@ -7,7 +7,7 @@ int main() {
 
     vector<int> lower(26, 0), upper(26, 0);
     vector<char> ans;
-
+     
     // Count vowels and mark their positions
     for (int i = 0; i < s.size(); i++) {
         if (s[i] == 'a' || s[i] == 'e' || s[i] == 'i' ||
